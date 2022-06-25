@@ -12,6 +12,9 @@ async function main() {
     console.log("Deploying Contract...")
     const simpleStorage = await SimpleStorageFactory.deploy()
     await simpleStorage.deployed()
+    // what's the private key?
+    // what's the RPC URL ?
+    console.log(`Deployed contract to ${simpleStorage.address}`)
 }
 
 // main
