@@ -15,4 +15,13 @@ describe("SimpleStorage", function () {
         assert.equal(currentValue.toString(), expectedValue)
         // expect
     })
+
+    it("Should update when we call store", async function () {
+        const expectedValue = "7"
+        const transactionResponse = await simpleStorage.store(expectedValue)
+        await transactionResponse.wait(1)
+
+        const currentValue = await simpleStorage.retrieve()
+        assert.equal(currentValue.toString(), expectedValue)
+    })
 })
