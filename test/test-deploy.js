@@ -23,5 +23,6 @@ describe("SimpleStorage", function () {
 
         const currentValue = await simpleStorage.retrieve()
         assert.equal(currentValue.toString(), expectedValue)
+        // expect(currentValue.toString()).to.equal(expectedValue)
     })
 })
